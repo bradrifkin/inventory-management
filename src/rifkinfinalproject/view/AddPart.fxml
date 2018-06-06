@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rifkinfinalproject.view.AddPartController">
+   <children>
+      <Label layoutX="33.0" layoutY="18.0" text="Add Part" textFill="#030d90">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="ADDPARTInhouseRadioButton" layoutX="202.0" layoutY="20.0" mnemonicParsing="false" onAction="#ADDPARTradioButtonInhouse" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="partLocation" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="ADDPARTOutsourcedRadioButton" layoutX="370.0" layoutY="20.0" mnemonicParsing="false" onAction="#ADDPARTradioButtonOutsourced" text="Outsourced" toggleGroup="$partLocation" />
+      <Label fx:id="ADDPARTIDLabel" layoutX="65.0" layoutY="64.0" text="ID" />
+      <TextField fx:id="ADDPARTIDTextField" disable="true" layoutX="189.0" layoutY="52.0" prefHeight="40.0" prefWidth="149.0" promptText="Auto Gen - Disabled">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="ADDPARTNameLabel" layoutX="65.0" layoutY="114.0" text="Name" />
+      <TextField fx:id="ADDPARTNameTextField" layoutX="189.0" layoutY="102.0" prefHeight="40.0" prefWidth="149.0" promptText="Part Name">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="ADDPARTInvLabel" layoutX="65.0" layoutY="162.0" text="Inv" />
+      <TextField fx:id="ADDPARTInvTextField" layoutX="189.0" layoutY="150.0" prefHeight="40.0" prefWidth="149.0" promptText="Inv">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="ADDPARTPriceLabel" layoutX="65.0" layoutY="211.0" text="Price" />
+      <TextField fx:id="ADDPARTPriceTextField" layoutX="189.0" layoutY="199.0" prefHeight="40.0" prefWidth="149.0" promptText="Price">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="ADDPARTMaxLabel" layoutX="65.0" layoutY="261.0" text="Max" />
+      <TextField fx:id="ADDPARTMaxTextField" layoutX="189.0" layoutY="249.0" prefHeight="40.0" prefWidth="114.0" promptText="Max">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="ADDPARTLocationLabel" layoutX="65.0" layoutY="311.0" text="Machine ID" />
+      <TextField fx:id="ADDPARTLocationTextField" layoutX="189.0" layoutY="299.0" prefHeight="40.0" prefWidth="149.0" promptText="Machine ID">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="addPartMinLabel" layoutX="378.0" layoutY="262.0" text="Min" />
+      <TextField fx:id="ADDPARTMinTextField" layoutX="435.0" layoutY="250.0" prefHeight="40.0" prefWidth="114.0" promptText="Min">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Button fx:id="ADDPARTSaveButton" layoutX="358.0" layoutY="350.0" mnemonicParsing="false" onAction="#ADDPARTSaveButtonHandler" prefHeight="34.0" prefWidth="83.0" text="Save" />
+      <Button fx:id="ADDPARTCancelButton" layoutX="474.0" layoutY="350.0" mnemonicParsing="false" onAction="#ADDPARTCancelButtonHandler" prefHeight="34.0" prefWidth="83.0" text="Cancel" />
+   </children>
+</AnchorPane>
